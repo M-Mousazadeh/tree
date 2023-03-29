@@ -1,0 +1,15 @@
+<% if(data.length > 0){ %>
+    <% data.forEach(element=>{ %>
+        <div class="container">
+            <ul class="wtree">
+                <li><span><%= element['id']%></span>
+                    <ul>
+                        <% element['child'].forEach(val=>{ %>
+                            <a href="<%=element['link']%>" target="_blank"><li><span><%= val %></span></li></a>
+                        <% }) %>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    <% }) %>
+<% } %>
